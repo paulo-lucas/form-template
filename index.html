@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" >
+		<title>Formulário GEEN</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script >
+		<script src="script.js"> </script>
+	</head>
+	<body>
+		<div class="container">
+			<div id="box">
+					<h1>Cadastrar Usuário</h1>
+
+				<form id="formulario" autocomplete="off">
+					<br />
+					Nome:<br />
+					<input class="dados" type ="text" name ="Nome" id="nome" maxlength="100">
+					<br />
+
+					Sobrenome:<br />
+					<input class="dados" type ="text" name ="Sobrenome" id="sobrenome" maxlength="100">
+					<br />
+
+					Email:<br />
+					<input class="dados" type ="email" name ="Email" id="email" maxlength="100">
+					<br />
+
+					Telefone:<br />
+					<input class="dados" type ="tel" name ="Telefone" id="telefone" maxlength="15">
+					<br />
+					
+					Data de Nascimento:<br />
+
+					<!-- No exercício pediu pra fazer com 10 dias pro codigo ficar menor, mas ai resolvi fazer com um pouco de js e dar os 31 dias todos -->
+					<select class="dados" id="dia" name="Dia de Nascimento" >
+						<option value="" selected disabled hidden>Dia</option>
+						<script>
+							for(var i=1; i<=31; i++){
+								var select = document.getElementById("dia");
+								var option = document.createElement("OPTION");
+								select.options.add(option);
+								option.text = i;
+								option.value = i;
+							}
+						</script>
+					</select>
+
+					<select class="dados" id="mes" name="Mês de Nascimento">
+						<option value="" selected disabled hidden>Mês</option>
+						<option value="01">Jan</option>
+						<option value="02">Fev</option>
+						<option value="03">Mar</option>
+						<option value="04">Abr</option>
+						<option value="05">Mai</option>
+						<option value="06">Jun</option>
+						<option value="07">Jul</option>
+						<option value="08">Ago</option>
+						<option value="09">Set</option>
+						<option value="10">Out</option>
+						<option value="11">Nov</option>
+						<option value="12">Dez</option>
+					</select>
+
+					<!-- Entre 18 e 50 anos -->
+					<select class="dados" id="ano" name="Ano de Nascimento">
+						<option value="" selected disabled hidden>Ano</option>
+						<script>
+							for(var i=1969; i<=2001; i++){
+								var select = document.getElementById("ano");
+								var option = document.createElement("OPTION");
+								select.options.add(option);
+								option.text = i;
+								option.value = i;
+							}
+						</script>
+					</select>
+					<br />
+
+					Descrição:<br />
+					<textarea class="dados" name ="Descrição" id="descricao" maxlength ="50" rows ="5" cols ="50"></textarea>
+					<br />
+
+					<input type="submit" id="enviar" value="Enviar">
+					<input type="reset" value="Limpar">
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

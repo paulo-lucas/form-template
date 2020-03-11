@@ -1,0 +1,65 @@
+body{
+	background: #363940;
+	margin: 0;
+}
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+   	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#box{
+	display: inline-block;
+	background: white;
+	padding: 30px 30px;
+	position:relative;
+	width: 450px;
+    height: 550px;
+    font-family: "Trebuchet MS";
+   
+    
+    border-radius: 4px;
+}
+	
+.dados{
+	border: 1px solid #ccc;
+  	border-radius: 4px;
+  	box-sizing: border-box;
+  	width: 100%;
+	padding: 8px 0;
+	margin: 0 0 8px 0;
+	background: #eee;
+}
+
+#formulario select{
+	display: inline-block;
+	width: 20%;
+}
+
+#formulario select option{
+  	background-color: #f9f9f9;
+}
+
+input[type=submit], input[type=reset]{
+	padding: 8px 12px;
+	margin: 8px 0;
+  	border-radius: 4px;
+  	cursor: pointer;
+}
+
+input[type=submit]{
+	border: none;
+	background-color: #1E90FF;
+	color: white;
+}
+
+input[type=reset]{
+	background-color: #eeeeee;
+	border: 1px solid #ccc;
+	border-width: thin;
+}
